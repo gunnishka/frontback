@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - *название сайта*</title>
+    <meta name="description" content="Краткое описание главной страницы">
+    <link href="styles/style.css" rel="stylesheet">
+    <script src="/Фронтенд и бэкенд разработка/ПР1-2/my_project/src/js/main.js" defer></script> 
+</head>
+<body>
+    <header>
+        <img id="mainIcon" src="/Фронтенд и бэкенд разработка/ПР1-2/my_project/assets/icon.png"></img>
+        <nav>
+            <ul>
+                <li><a class="link" href="index.html">Главная</a></li>
+                <li><a class="link" href="about.html">О нас</a></li>
+                    <li><a class="link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Добро пожаловать на наш сайт</h1>
+        <section id="services">
+            <h2>Наши услуги</h2>
+            <p>*описание предлагаемых услуг*</p>
+            <a href="#contacts">Связаться с нами</a>
+        </section>
+        <section id="portfolio">
+            <h2>Портфолио</h2>
+            <img srс="assets/image.jpg", alt="image", loading="lazy">
+        </section>
+        <section id="contacts">
+            <h2>Контактная информация</h2>
+            <p>*контакты*</p>
+            <a href="contacts.html">Подробнее...</a>
+        </section>
+        <button id="openDialog" type="button">Написать нам</button>
+        <dialog id="contactDialog" aria-labelledby="dialogTitle">
+            <h2 id="dialogTitle">Обратная связь</h2>
+            <form id="contactForm" method="dialog" novalidate>
+                <label for="name">Имя</label>
+                <input id="name" name="name" type="text" required minlength="2" autocomplete="given-name">
+
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" required autocomplete="email">
+
+                <label for="phone">Телефон</label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
+                    aria-describedby="phoneHelp" placeholder="+7(___) ___-__-__"
+                    required pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"> 
+                <small id="phoneHelp">Формат: +7(999) 999-99-99</small>
+
+                <label for="date">Дата</label>
+                <input id="date" name="date" type="date">
+
+                <label for="topic">Тема</label>
+                <select id="topic" name="topic" required>
+                    <option value="">Выберите тему:</option>
+                    <option>Вопрос</option>
+                    <option>Заказ</option>
+                </select>
+
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <div class="form-actions">
+                    <button type="button" class="closeDialog">Закрыть</button>
+                    <button type="submit">Отправить</button>
+                </div>
+            </form>
+        </dialog>
+    </main>
+    <footer>
+        <p>&copy; 2023 *название сайта*. Все права защищены.</p>
+        <p>Телефон: +7(999)-999-99-99</p>
+    </footer>
+</body>
+</html>
