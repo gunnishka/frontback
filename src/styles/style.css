@@ -20,7 +20,7 @@ dialog::backdrop{
 }
 
 *{ 
-    box-sizing: border-box; 
+    box-sizing:content-box; 
 }
 
 html, body{ 
@@ -181,4 +181,12 @@ button,input,select,textarea{
     height: 100%;
     border: 0;
     border-radius: var(--radius);
+}
+
+li{
+    list-style: none;
+}
+
+footer{
+    margin-bottom:-100px;
 }
